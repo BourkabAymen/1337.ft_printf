@@ -6,7 +6,7 @@
 /*   By: abourkab <abourkab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:43:28 by abourkab          #+#    #+#             */
-/*   Updated: 2022/10/23 16:47:54 by abourkab         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:35:06 by abourkab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	ft_print_memory(const void *ptr, int *index);
 int		ft_printf(const char *format, ...);
 
 #endif
-

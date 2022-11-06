@@ -6,7 +6,7 @@
 /*   By: abourkab <abourkab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:43:15 by abourkab          #+#    #+#             */
-/*   Updated: 2022/10/23 16:57:22 by abourkab         ###   ########.fr       */
+/*   Updated: 2022/11/03 20:58:44 by abourkab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	ft_check_specifier(va_list args, const char spec, int *index)
 {
 	if (spec == 'c')
-		ft_putchar((char)va_arg(args, int), index);
+		ft_putchar(va_arg(args, int), index);
 	else if (spec == 's')
 		ft_putstr(va_arg(args, char *), index);
 	else if (spec == 'u')
@@ -28,8 +28,6 @@ static void	ft_check_specifier(va_list args, const char spec, int *index)
 		ft_print_memory(va_arg(args, void *), index);
 	else if (spec == '%')
 		ft_putchar('%', index);
-	else
-		ft_putchar(spec, index);
 }
 
 int	ft_printf(const char *format, ...)
@@ -41,12 +39,12 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format + 1))
 		{
 			format++;
 			ft_check_specifier(args, *format, &len);
 		}
-		else
+		else if (*format != '%')
 			ft_putchar(*format, &len);
 		format++;
 	}

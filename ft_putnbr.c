@@ -6,7 +6,7 @@
 /*   By: abourkab <abourkab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:43:59 by abourkab          #+#    #+#             */
-/*   Updated: 2022/10/23 21:19:07 by abourkab         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:36:17 by abourkab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ void	ft_putnbr(int nb, int *index)
 	else
 		ft_putchar(nb + 48, index);
 }
-
